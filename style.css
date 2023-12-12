@@ -1,0 +1,12 @@
+:root {
+    --color-red: #c12a32;
+    --color-rosa: #d3a17f;
+    --color-marrom1: #7a4c31;
+    --color-preto: #21231e;
+    --color-marrom2: #4e3524; 
+}
+
+/* .box-reflect-below {
+    line-height: 60px;
+    -webkit-box-reflect: below 0 linear-gradient(transparent, rgba(0,0,0,0.4));
+} */
