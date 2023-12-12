@@ -1,15 +1,19 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const form = document.getElementById('cadastroForm');
+    const cadastroForm = document.getElementById('cadastroForm');
 
-    form.addEventListener('submit', async (event) => {
+    cadastroForm.addEventListener('submit', async (event) => {
         event.preventDefault();
 
-        const name = document.getElementById('nameInput').value;
-        const email = document.getElementById('emailInput').value;
-        const password = document.getElementById('passwordInput').value;
+        const nameInput = document.getElementById('nameInput');
+        const emailInput = document.getElementById('emailInput');
+        const passwordInput = document.getElementById('passwordInput');
+
+        const name = nameInput.value;
+        const email = emailInput.value;
+        const password = passwordInput.value;
 
         try {
-            const response = await fetch('https://api-natal.onrender.com/register', {
+            const response = await fetch('http://localhost:3440/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -20,10 +24,30 @@ document.addEventListener("DOMContentLoaded", () => {
             const data = await response.json();
 
             if (response.ok) {
-                // Código para exibir sucesso ao usuário
-                console.log('Usuário cadastrado com sucesso!', data);
+                
+                const modal = document.getElementById('modal');
+                const modalMessage = document.getElementById('modalMessage');
+                modalMessage.innerText = data.mensagem;
+
+                modal.classList.remove('invisible', 'opacity-0');
+                modal.classList.add('visible', 'opacity-100');
+
+                setTimeout(() => {
+                    modal.classList.add('invisible', 'opacity-0');
+                    modal.classList.remove('visible', 'opacity-100');
+
+                    nameInput.value = '';
+                    emailInput.value = '';
+                    passwordInput.value = '';
+                }, 3000);
+
+            } else if (data.mensagem === "Nome de usuário já existe") {
+                alert("Nome de usuário já existe");
+
+            } else if (data.mensagem === "Email já está em uso") {
+                alert("Email já está em uso");
+
             } else {
-                // Exibir mensagem de erro no seu modal
                 console.error('Erro ao cadastrar usuário:', data.mensagem);
             }
         } catch (error) {
