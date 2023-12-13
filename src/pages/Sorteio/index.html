@@ -1,86 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/img/natal.png" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Afacad:ital@1&family=Poppins:ital,wght@0,100;1,200;1,300&display=swap"
+        rel="stylesheet">
     <title>Sorteio</title>
 </head>
 
-<body class="bg-[#f8f8ff]">
+<body class="bg-gradient-to-l from-red-600 to-red-900 h-screen">
 
-    <div class="min-h-screen items-center justify-center px-6 py-6">
-        <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-            <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                    <tr>
-                        <th scope="col" class="px-6 py-3">
-                            Nome
-                        </th>
-                        <th scope="col" class="px-6 py-3">
-                            Email
-                        </th>
-                        <th scope="col" class="px-6 py-3">
-                            Category
-                        </th>
-                        <th scope="col" class="px-6 py-3">
-                            Price
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr
-                        class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                            Apple MacBook Pro 17"
-                        </th>
-                        <td class="px-6 py-4">
-                            Silver
-                        </td>
-                        <td class="px-6 py-4">
-                            Laptop
-                        </td>
-                        <td class="px-6 py-4">
-                            $2999
-                        </td>
-                    </tr>
-                    <tr
-                        class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                            Microsoft Surface Pro
-                        </th>
-                        <td class="px-6 py-4">
-                            White
-                        </td>
-                        <td class="px-6 py-4">
-                            Laptop PC
-                        </td>
-                        <td class="px-6 py-4">
-                            $1999
-                        </td>
-                    </tr>
-                    <tr class="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600">
-                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                            Magic Mouse 2
-                        </th>
-                        <td class="px-6 py-4">
-                            Black
-                        </td>
-                        <td class="px-6 py-4">
-                            Accessories
-                        </td>
-                        <td class="px-6 py-4">
-                            $99
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+    <div class="w-full font-[Afacad] min-h-screen p-6">
+        <h1 class="font-semibold text-xl text-center text-white tracking-widest md:text-3x1 md:mt-12 mb-4">Escolha uma
+            opção desejada:</h1>
+
+        <div class="flex flex-wrap justify-center">
+            <div class="flex flex-col rounded-lg shadow-md w-full m-6 overflow-hidden bg-[#f8f8ff] sm:w-52">
+                <img src="/img/database-icon.svg" class="h-20 m-6">
+                <h2 class="text-center px-2 font-extrabold pb-5 text-[20px] font-[Poppins]">Criar grupo para sorteio
+                </h2>
+                <a href="/src/pages/Sorteio/CreateGroup/index.html"
+                    class="bg-[#7a4c31] text-white p-3 text-center  hover:bg-[#4e3524] transition-all duration-500">Acessar</a>
+            </div>
+
+            <div class="flex flex-col rounded-lg shadow-md w-full m-6 overflow-hidden bg-[#f8f8ff] sm:w-52">
+                <img src="/img/email-icon.svg" class="h-20 m-6">
+                <h2 class="text-center px-2 font-extrabold pb-5 text-[20px] font-[Poppins]">Participar de um grupo</h2>
+                <a href="#"
+                    class="bg-[#7a4c31] text-white p-3 text-center  hover:bg-[#4e3524] transition-all duration-500">Acessar</a>
+            </div>
+
+            <div class="flex flex-col rounded-lg shadow-md w-full m-6 overflow-hidden bg-[#f8f8ff] sm:w-52">
+                <img src="/img/chat-icon.svg" class="h-20 m-6">
+                <h2 class="text-center px-2 font-extrabold pb-5 text-[20px] font-[Poppins]">Histórico de sorteios</h2>
+                <a href="#"
+                    class="bg-[#7a4c31] text-white p-3 text-center  hover:bg-[#4e3524] transition-all duration-500">Saiba
+                    Mais</a>
+            </div>
+
+            <div class="flex flex-col rounded-lg shadow-md w-full m-6 overflow-hidden bg-[#f8f8ff] sm:w-52">
+                <img src="/img/terminal-icon.svg" class="h-20 m-6">
+                <h2 class="text-center px-2 font-extrabold pb-5 text-[20px] font-[Poppins]">Notificação dos grupos</h2>
+                <a href="#"
+                    class="bg-[#7a4c31] text-white p-3 text-center  hover:bg-[#4e3524] transition-all duration-500">Saiba
+                    Mais</a>
+            </div>
         </div>
     </div>
-
-
 </body>
 
 </html>

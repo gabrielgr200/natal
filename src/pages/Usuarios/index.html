@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/img/natal.png" type="image/x-icon">
+  <link rel="stylesheet" href="/style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Afacad:ital@1&family=Poppins:ital,wght@0,100;1,200;1,300&display=swap"
+    rel="stylesheet">
+  <title>Usuários</title>
+</head>
+
+<body class="bg-gradient-to-r from-red-600 to-red-900 h-screen font-[Afacad]">
+
+  <header class="bg-[#f8f8ff] shadow-lg">
+    <nav class="flex justify-between items-center w-[92%] mx-auto">
+      <div>
+        <img class="w-16 py-1" src="/img/natal.png">
+      </div>
+
+      <div
+        class="nav-links duration-500 md:static absolute bg-[#f8f8ff] md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5">
+
+        <ul class="flex md:flex-row flex-col  md:items-center md:gap-[4vw] gap-8">
+          <li><a class="text-[#21231e] font-[Afacad] text-[20px] hover:text-[#c12a32] " href="/">Início</a>
+          </li>
+          <li><a class="text-[#21231e] font-[Afacad] text-[20px] hover:text-[#c12a32]" href="#">Sobre</a></li>
+          <li><a class="text-[#21231e] font-[Afacad] text-[20px] hover:text-[#c12a32]" href="#">Usuários</a>
+          </li>
+          <li><a class="text-[#21231e] font-[Afacad] text-[20px] hover:text-[#c12a32]"
+              href="/src/pages/Sorteio/index.html">Sorteio</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="flex items-center gap-6">
+        <a href="/src/pages/Login/index.html"
+          class="bg-[#034f1b] py-2 px-5 text-white rounded-full font-semibold font-[Poppins] hover:bg-[#1d6634]">Faça o
+          login</a>
+        <ion-icon name="menu-outline" onclick="onToggleMenu(this)" class="text-sm cursor-pointer md:hidden"></ion-icon>
+        <!-- <ion-icon name="close-outline"></ion-icon> -->
+      </div>
+    </nav>
+  </header>
+
+  <div class="flex justify-center items-center px-6 py-8">
+    <div class="bg-[#f5f5f5] shadow-lg text-center py-2 px-4 rounded-lg">
+      <p class="text-[19px]">
+        Certamente, aqui é possível visualizar as pessoas atualmente cadastradas e 
+        selecionar aquelas que deseja incluir no sorteio. <br> Obs: Para incluir os participantes, antes o grupo tem
+        que estar criado.
+      </p>
+    </div>
+  </div>
+
+  <div class="min-h-screen items-center justify-center px-6 py-4">
+    <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+      <table id="usersTable" class="w-full text-sm text-left rtl:text-right">
+        <thead class="text-xs text-[#21231e] uppercase bg-gray-50 dark:bg-gray-100">
+          <tr>
+            <th scope="col" class="px-10 py-3 text-[#21231e] font-semibold text-[14px] text-center">
+              Nome
+            </th>
+            <th scope="col" class="px-4 py-3 text-[#21231e] font-semibold text-[14px] text-center">
+              Número do sorteio(ID)
+            </th>
+            <th scope="col" class="text-center py-3 text-[#21231e] font-semibold text-[14px]">
+              Selecionar os participantes
+            </th>
+          </tr>
+        </thead>
+        <tbody id="usersTableBody" class="bg-gray-500 text-white">
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="/js/javascript.js"></script>
+</body>
+
+</html>
