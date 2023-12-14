@@ -1,4 +1,4 @@
-fetch('http://localhost:3440/users')
+fetch('https://web-production-8912.up.railway.app/users')
   .then(response => response.json())
   .then(data => {
     const usersTableBody = document.getElementById('usersTableBody');

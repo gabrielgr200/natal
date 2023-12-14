@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const password = passwordInput.value;
 
         try {
-            const response = await fetch('http://localhost:3440/register', {
+            const response = await fetch('https://web-production-8912.up.railway.app/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
